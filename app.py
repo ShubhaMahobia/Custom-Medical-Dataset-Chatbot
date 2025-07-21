@@ -211,19 +211,8 @@ def main():
             st.rerun()
     
     else:
-        st.markdown("""
-        <div class="status-box info-box">
-            <h3>Welcome to the Medical Knowledge Chatbot!</h3>
-            <p>To get started:</p>
-            <ol>
-                <li>Make sure you have your Pinecone API key in the .env file</li>
-                <li>Make sure you have your OpenAI API key in the .env file</li>
-                <li>If the index doesn't exist, click "Create Index" in the sidebar</li>
-                <li>Once the index is ready, click "Initialize Chatbot"</li>
-            </ol>
-        </div>
-        """, unsafe_allow_html=True)
-        
+        st.image("RAG.png", caption="RAG Application Architecture", use_column_width=True)
+        st.info("To get started, click 'Create Index' on the left menu to begin indexing your documents.")
         # Display environment status
         st.subheader("🔑 Environment Status")
         col1, col2 = st.columns(2)
